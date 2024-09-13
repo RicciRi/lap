@@ -1,4 +1,4 @@
-@import url('./fonts/fonts.css');
+@import "fonts/fonts.css";
 
 * {
     box-sizing: border-box;
@@ -6,7 +6,7 @@
 
 body {
     min-width: 320px;
-    /*width: 360px;*/
+    width: 360px;
     position: relative;
     font-family: 'Ruberoid', sans-serif;
     line-height: 1.4;
@@ -14,12 +14,9 @@ body {
     background: #ffffff;
     overflow-x: hidden;
     opacity: 1;
-
     margin: 0;
     /*width: 1920px;*/
     /*height: 1080px;*/
-
-
 }
 
 .lg-display-block {
@@ -27,7 +24,7 @@ body {
 }
 
 .header-imatation {
-    height: 130px;
+    height: 113px;
 }
 
 .underline-none {
@@ -54,6 +51,10 @@ body {
     z-index: -1;
 }
 
+.d-none {
+    display: none !important;
+}
+
 
 /*BILBOARD*/
 
@@ -62,6 +63,7 @@ body {
     position: relative;
     min-height: 100vh;
     color: rgba(249, 250, 244, 1);
+    overflow: hidden;
 }
 
 .billboard__background {
@@ -76,13 +78,28 @@ body {
 
 .billboard__content-wrap {
     position: relative;
-    display: flex;
+    /*display: flex;*/
+    /* flex-wrap: wrap; */
 }
 
-.lalala {
-    position: absolute;
+.logo-sm {
     right: 0;
     top: -30%;
+    position: static;
+    font-size: 0;
+    line-height: 1;
+    margin: -177px -239px 0 -561px;;
+    text-align: center;
+}
+
+.logo-lg {
+    position: static;
+    right: 0;
+    top: -30%;
+    font-size: 0;
+    line-height: 1;
+    margin: -177px -239px 0 -561px;;
+    text-align: center;
 }
 
 .billboard__content {
@@ -98,34 +115,29 @@ body {
 }
 
 .billboard__badge {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 0 8px 0 0;
-    padding: 6px 12px;
+    padding: 7px 11px 6px 11px;
     line-height: 1;
     font-size: 10px;
     font-weight: 400;
+    white-space: nowrap;
     color: rgba(255, 255, 255, 1);
     border: 1px solid rgba(24, 171, 34, 1);
     border-radius: 34px;
-    white-space: nowrap;
 }
 
 .billboard__title {
     font-size: 36px;
-    font-weight: 500;
-    line-height: 39.6px;
+    font-weight: 400;
+    line-height: 1.08;
     margin-top: 10px;
-    margin-bottom: 15px;
-    text-align: left;
 }
 
 .billboard__description {
-    margin: 26px 0;
+    margin: 28px 0 0 0;
     font-size: 18px;
-    font-weight: 600;
-    line-height: 19.8px;
+    font-weight: 400;
+    line-height: 1.1;
     text-align: left;
 
 }
@@ -138,18 +150,14 @@ body {
 
 .billboard__button .button--google {
     max-width: fit-content;
-    margin-top: 66px;
-
+    margin-top: 61px;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    padding: 14px 16px 10px 16px;
-
+    padding: 10px 15px 10px 22px;
     font-size: 16px;
     font-weight: 400;
     line-height: 1;
-
     color: #fff;
     background: linear-gradient(90deg, #18AB22 0%, #0E5212 100%);
     border-radius: 35px;
@@ -159,7 +167,8 @@ body {
 }
 
 .billboard__button svg {
-    margin: 0 0 0 10px;
+    margin: 0 0 0 6px;
+    padding: 3px 0 0 0;
 }
 
 .billboard__logo-sm {
@@ -201,8 +210,8 @@ body {
     margin: 30px 0;
     font-size: 20px;
     font-weight: 400;
-    line-height: 22px;
-    letter-spacing: -0.085em;
+    line-height: 1.2;
+    letter-spacing: -0.09em;
     text-align: center;
 }
 
@@ -281,22 +290,22 @@ body {
 }
 
 .profession__title {
-    margin: 40px 0 40px 0;
-    font-size: 30px;
-    line-height: 33px;
+    margin: 27px 0 29px 0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.07;
+    letter-spacing: -0.095em;
     text-align: center;
 }
 
 .profession__blocks {
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
 .profession__block {
     max-width: 600px;
-    margin: 20px auto;
-    padding: 30px 30px 17px 30px;
+    padding: 30px 30px 26px 30px;
     text-align: left;
     color: #ffffff;
     /*background: linear-gradient(0deg, #D9D9D9, #D9D9D9),*/
@@ -324,9 +333,10 @@ body {
 }
 
 .profession__block--note {
+    margin: 12px 0 0 0;
     position: relative;
     background-color: #2c2c2c;
-    padding: 30px;
+    padding: 30px 40px 35px 30px;
     font-size: 14px;
     line-height: 17.12px;
 }
@@ -347,6 +357,7 @@ body {
 
 .profession__note {
     font-size: 14px;
+    line-height: 1.23;
 }
 
 .profession__list-tittle {
@@ -354,17 +365,23 @@ body {
     margin: 14px 0 10px 0;
 }
 
-.profession__list {
-    line-height: 17px;
-    list-style: disc;
-    padding-left: 20px;
-    margin-bottom: 20px;
-}
-
-.profession__list-item {
+.profession__item {
     font-size: 14px;
-    /*font-weight: 500;*/
-    /*margin-bottom: 10px;*/
+    position: relative;
+    padding-left: 22px;}
+
+.profession__item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    border-radius: 50%; /* Для создания круглой формы */
+    margin-left: 10px; /* Отступ слева от края контейнера */
+    margin-right: 10px; /* Отступ справа, чтобы отодвинуть текст */
 }
 
 
@@ -373,17 +390,16 @@ body {
 .course-program {
     background: linear-gradient(157.72deg, #292727 -19.79%, #000000 58.45%);
     /*background: red;*/
-    padding: 16px 20px;
     color: #fff;
     margin-top: 60px;
 }
 
 .course-program__title {
-    margin: 22px 0 26px 0;
+    padding: 30px 30px 26px 30px;
     font-size: 24px;
     font-weight: 400;
-    line-height: 26.4px;
-    letter-spacing: -0.085em;
+    line-height: 1.1;
+    letter-spacing: -0.09em;
     text-align: center;
 }
 
@@ -469,32 +485,31 @@ body {
 /*!!! ACCORDION MENU !!!*/
 
 .panel {
-    padding: 8px 24px;
+    margin: 0 0 12px 0;
+    padding: 27px 26px 26px 25px;
     background: linear-gradient(157.72deg, #454545 -19.79%, #1B1B1B 58.45%);
     border-radius: 13px;
-    margin-top: 13px;
 }
 
 .panel-body ul {
     font-size: 12px;
     font-weight: 300;
-    line-height: 14.4px;
+    line-height: 1.1;
     text-align: left;
     padding: 0 18px;
-    margin: 0 !important;
+    margin: 16px 17px 0 17px;
 }
 
 .panel-title {
     position: relative;
-    min-height: 30px;
-    padding-right: 10px;
+    margin: 0;
 }
 
 .panel-title .open-icon {
+    margin: 0 0 0 auto !important;
     min-width: 30px;
     min-height: 30px;
     transition: transform 0.3s ease, fill 0.3s ease; /* Плавный переход */
-    margin-left: auto;
 }
 
 .panel-title a[aria-expanded="true"] .open-icon {
@@ -503,55 +518,68 @@ body {
     color: transparent;
 }
 
-.panel-title a {
+.panel-title .panel-title-open-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    padding: 5px 0;
-    gap: 10px;
     color: #ffffff;
     text-decoration: none;
     font-family: Ruberoid, sans-serif;
     font-size: 14px;
     font-weight: 400;
-    line-height: 16.8px;
+    line-height: 1.2;
     text-align: left;
 }
 
+.panel-title-text {
+    padding: 0 30px 0 0;
+}
+
+.panel-title svg {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px 0 0;
+}
+
 .panel-default ul {
-    padding-bottom: 40px;
-    font-weight: 300;
+    padding-bottom: 32px;
+    font-weight: 400;
 }
 
 .panel-big {
-    padding: 30px 32px !important;
-    margin-top: 30px;
+    margin: 30px 0 0 0;
 }
 
 .panel-title-content-big {
+    display: flex;
     justify-content: start;
 }
 
+.panel-title-content-big svg {
+    width: 36px;
+    height: 36px;
+}
+
 .panel-title-content-big-title-second {
+    margin: 7px 0 0 7px;
     font-size: 18px;
-    font-weight: 500;
-    line-height: 19.01px;
+    font-weight: 400;
+    line-height: 1.1;
     text-align: left;
 
 }
 
 .panel-title-big {
-    margin: 30px -4px 10px 0;
+    margin: 18px 0 0 0;
     font-size: 14px;
     font-weight: 400;
-    line-height: 16.8px;
-    text-align: left;
+    line-height: 1.2;
+}
 
+
+.panel-body-big ul {
+    margin: 14px 0 0 8px;
+    font-size: 12px;
 }
 
 
@@ -570,12 +598,11 @@ body {
 .pricing__plans-wrap {
     display: flex;
     justify-content: center;
-    gap: 26px;
     flex-wrap: wrap;
 }
 
 .pricing__title {
-    padding: 30px 0;
+    padding: 31px 0 24px 0;
     font-size: 24px;
     font-weight: 400;
     line-height: 26.4px;
@@ -593,7 +620,7 @@ body {
     height: max-content;
     position: relative;
     background: rgba(133, 133, 133, 0.1);
-    padding: 67px 33px 30px 33px;
+    padding: 0 32px;
     width: 320px;
     border-radius: 13px;
 }
@@ -605,10 +632,10 @@ body {
 }
 
 .plan__title {
-    margin-bottom: 35px;
+    margin: 60px 0 36px 0;
     font-size: 30px;
-    font-weight: 800;
-    line-height: 33px;
+    font-weight: 400;
+    line-height: 1.1;
     letter-spacing: -0.085em;
     text-align: left;
     text-transform: uppercase;
@@ -626,12 +653,16 @@ body {
 .plan__feature {
     display: flex;
     justify-content: start;
-    align-items: center;
+    align-items: start;
     font-size: 12px;
     font-weight: 400;
-    line-height: 13.37px;
-    margin: 10px 0;
+    line-height: 1.19;
+    margin: 12px 0;
     text-align: start;
+}
+
+.plan__feature-icon {
+    margin: auto 0;
 }
 
 .plan__feature .plan__feature-icon svg {
@@ -647,18 +678,19 @@ body {
 }
 
 .plan__price {
-    margin: 28px 0 14px 0;
+    margin: 28px 0 11px 0;
     font-family: Ruberoid, sans-serif;
     font-size: 30px;
     font-weight: 400;
-    line-height: 33px;
+    line-height: 1.2;
     letter-spacing: -0.085em;
     text-align: left;
 
 }
 
 .plan__cta {
-    padding: 4px;
+    margin-bottom: 20px;
+    padding: 6px 0 4px 0;
     width: 100%;
     display: flex;
     align-items: center;
@@ -672,6 +704,10 @@ body {
     border: none;
     border-radius: 22px;
     cursor: pointer;
+}
+
+.plan__cta-text {
+    margin: 0 7px;
 }
 
 .plan__cta-pro {
@@ -695,8 +731,7 @@ body {
     justify-content: space-around;
     max-width: 1200px;
     margin: 0 auto;
-    gap: 20px;
-    padding: 40px 20px 100px 20px;
+    padding: 40px 20px 60px 20px;
     background: #000;
     border-radius: 30px;
     color: white;
@@ -705,9 +740,7 @@ body {
 
 .step-list__item {
     width: 100%;
-    min-width: 260px;
-    max-width: 260px;
-    min-height: 104px;
+    margin-bottom: 40px;
 }
 
 
@@ -734,13 +767,14 @@ body {
     margin-top: 20px;
     font-size: 14px;
     font-weight: 400;
-    line-height: 16.8px;
+    line-height: 1.22;
     text-align: left;
 
 }
 
 .step-list-wrap {
-    margin: 80px 20px 0 20px;
+    margin: 106px 0 0 0;
+    padding: 0 20px;
 }
 
 .step-list-title {
@@ -777,11 +811,12 @@ body {
 }
 
 .registration__description {
+    padding-right: 76px;
     margin-top: 19px;
     font-size: 16px;
     font-weight: 400;
-    line-height: 19.2px;
-    letter-spacing: -0.085em;
+    line-height: 1.2;
+    letter-spacing: -0.065em;
     text-align: left;
 
 }
@@ -791,13 +826,15 @@ body {
 }
 
 .registration__form-group {
-    margin-bottom: 20px;}
+    margin-bottom: 8px;
+}
 
 .registration__input {
+    font-family: 'Ruberoid', sans-serif;
     width: 100%;
-    padding: 8px;
-    border-radius: 40px;
-    border: 1px solid #4B4A4A;
+    padding: 9px 0 8px 13px;
+    border-radius: 32px;
+    border: 0.3px solid #ffffff;
     background: #000;
     color: white;
     font-size: 8px;
@@ -809,11 +846,13 @@ body {
 }
 
 .registration__button {
+    font-family: 'Ruberoid', sans-serif;
+    margin: 10px 0 0 0;
     width: 100%;
-    padding: 8px;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 18.8px;
+    padding: 10px 8px 6px 8px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.16;
     text-align: center;
     background-color: white;
     color: rgba(27, 63, 94, 1);
@@ -862,9 +901,18 @@ body {
         display: none !important;
     }
 
+    .collapse {
+        display: block !important;
+    }
+
+    .header-imatation {
+        height: 200px;
+    }
+
 
     .billboard__content-wrap {
-        padding: 0 45px;
+        display: flex;
+        /*padding: 0 45px;*/
     }
 
     .billboard__title {
@@ -898,13 +946,6 @@ body {
         width: 40px;
         height: 40px;
     }
-
-
-
-
-
-
-
 
 
     .features__list {
@@ -946,7 +987,7 @@ body {
         gap: 20px;
     }
 
-    .profession__block-illustration  {
+    .profession__block-illustration {
         /*max-height: 400px !important;*/
         min-height: 372px;
     }
@@ -984,6 +1025,10 @@ body {
         text-align: left;
     }
 
+    .panel-body-title {
+        margin: 20px 0 0 0;
+    }
+
     .panel-title svg {
         width: 50px;
         height: 50px;
@@ -991,11 +1036,17 @@ body {
     }
 
     .panel__body-title {
-        font-size: 18px;
+        font-size: 36px;
         font-weight: 400;
-        line-height: 22.8px;
+        line-height: 1.06;
+        margin-top: 10px;
+    }
+
+    .panel-title-text {
+        font-size: 27.39px;
+        font-weight: 400;
+        line-height: 1.1;
         text-align: left;
-        margin: 24px 0;
     }
 
     .panel ul {
@@ -1056,7 +1107,6 @@ body {
 
 
     /*pricing*/
-
     .pricing .pricing__title {
         padding: 60px 0;
         font-size: 50px;
@@ -1110,12 +1160,12 @@ body {
     }
 
 
-
     .step-list__item {
         padding: 12px 20px 20px 10px;
-        min-height: 230px;
+        min-height: 100px;
         min-width: 300px;
         margin-top: 20px;
+        max-width: 380px;
 
     }
 
@@ -1201,9 +1251,6 @@ body {
 
 }
 
-.d-none {
-    display: none;
-}
 
 @media (min-width: 1560.98px) {
     .d-lg-block {
@@ -1219,8 +1266,6 @@ body {
     }
 
 
-
-
     .billboard__title {
         font-size: 97px;
         font-weight: 400;
@@ -1229,27 +1274,26 @@ body {
     }
 
     .billboard__badge {
-        margin-bottom: 48px;
-        padding: 6px 18px;
+        margin: 0 14px 36px 0;
+        padding: 14px 20px 11px 14px;
         font-size: 17.26px;
-        line-height: 23.18px;
+        line-height: 1;
     }
 
     .billboard__description {
-        margin: 0;
+        margin: 20px 0;
         font-size: 38px;
         font-weight: 400;
-        line-height: 37.85px;
+        line-height: 1;
     }
 
     .billboard__button .button--google {
-        margin-top: 40px;
-        padding: 4px 30px 0 30px;
+        margin-top: 39px;
+        padding: 8px 19px 4px 26px;
         font-size: 24px;
         font-weight: 400;
         line-height: 32.23px;
     }
-
 
     .features__title {
         margin: 86px 0 106px 0;
@@ -1329,10 +1373,9 @@ body {
         line-height: 24px;
     }
 
-
     /*profession*/
     .profession__title {
-        margin: 208px 0 100px 0;
+        margin: 208px 0 92px 0;
         font-size: 60px;
         font-weight: 600;
         line-height: 66px;
@@ -1347,39 +1390,64 @@ body {
         height: 692px;
     }
 
-
     .profession__block {
-    padding: 44px 64px 34px 64px;
-    max-width: 946px;
+        padding: 44px 64px 40px 64px;
+        max-width: 946px;
     }
 
     .profession__list-tittle {
-    margin: 30px 0 20px 0;
+        margin: 30px 0 20px 0;
     }
 
     .profession__block-illustration {
-    width: 569px;
-    height: 692px;
+        width: 569px;
+        height: 692px;
 
     }
 
-    .profession__text, .profession__list-tittle, .profession__list-item, .profession__note {
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 29.35px;
+    .profession__list-items {
+        margin-bottom: 20px;
+    }
+
+    .profession__item {
+        position: relative;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1.1;
+        padding: 7px 0 0 34px;
+    }
+
+    .profession__item::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 18px;
+        width: 6px;
+        height: 6px;
+        background-color: white;
+        border-radius: 50%;
+        margin-left: 14px;
+        margin-right: 10px;
+    }
+
+    .profession__text, .profession__list-tittle, .profession__note {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29.35px;
     }
 
     .profession__block--note {
-    height: 100%;
-    display: flex;
-    align-items: center;
+        padding: 77px 113px 77px 60px;
+        height: 100%;
+        display: flex;
+        align-items: center;
     }
-
 
 
     /*program*/
     .course-program__title {
-        margin: 100px 0;
+        margin-top: 360px;
+        padding: 100px 0 34px 0;
         font-size: 60px;
         line-height: 66px;
         letter-spacing: -0.085em;
@@ -1390,8 +1458,11 @@ body {
     }
 
     .panel {
+        margin: 0 0 22px 0;
+        justify-content: normal;
+        padding: 40px 39px 40px 40px;
         font-family: 'Ruberoid', sans-serif;
-        width: 480px;
+        width: 499px;
         height: 420px;
         max-width: none;
         border-radius: 20px;
@@ -1406,10 +1477,30 @@ body {
         text-align: left;
     }
 
+    .panel-body-title {
+        margin: 34px 0 0 0;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1.1;
+        text-align: left;
+    }
+
     .panel-title svg {
         width: 60px;
         height: 60px;
-        margin-right: 46px;
+        margin-right: 32px;
+    }
+
+    .panel-body-big {
+        display: flex;
+        margin: 0 0 0 auto;
+    }
+
+    .panel-title-content-big-title-second {
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 65.09px;
+        text-align: left;
     }
 
     .panel__body-title {
@@ -1421,7 +1512,7 @@ body {
     }
 
     .panel ul {
-        padding: 0 26px;
+        padding: 4px 26px 0 8px;
         font-size: 18px;
         font-weight: 400;
         line-height: 21.6px;
@@ -1430,7 +1521,7 @@ body {
 
     .panel-big {
         margin: 80px 0 0 0;
-        padding: 0 60px !important;
+        padding: 0 70px !important;
         height: 260px;
     }
 
@@ -1440,10 +1531,10 @@ body {
     }
 
     .panel-title-big {
-        margin: 0;
+        margin: 20px 0 0 0;
         font-size: 24px;
         font-weight: 400;
-        line-height: 32.54px;
+        line-height: 1.4;
     }
 
     .panel-big .panel-body {
@@ -1452,7 +1543,8 @@ body {
     }
 
     .panel-big .panel-body ul {
-        margin: 40px 0 0 0 !important;
+        margin: 19px 0 19px 0 !important;
+        padding: 10px 0 0 30px !important;
         font-size: 24px;
         line-height: 28.8px;
     }
@@ -1460,23 +1552,25 @@ body {
 
     /*pricing*/
     .pricing .pricing__title {
-        padding: 76px 0;
+        padding: 90px 0 80px 0;
         font-size: 60px;
         line-height: 66px;
         letter-spacing: -0.085em;
     }
 
     .plan {
+        padding: 41px 50px;
         font-family: 'Ruberoid', sans-serif;
         width: 500px;
         border-radius: 20px;
     }
 
     .pricing__plans-wrap {
-        gap: 60px;
+        gap: 64px;
     }
 
     .plan__title {
+        margin: 50px 0;
         font-size: 48px;
         line-height: 52.8px;
         letter-spacing: -0.085em;
@@ -1514,17 +1608,25 @@ body {
         height: 43px;
     }
 
-
     .step-list {
-        max-width: 1548px;
-        padding: 94px 87px;
+        gap: 0 90px;
+        max-width: 1540px;
+        padding: 126px 11px 52px 118px;
+        justify-content: normal;
     }
 
     .step-list__item {
-        padding: 12px 20px 20px 10px;
+        margin: 0 9px 48px 0;
+        padding: 0;
         min-height: 230px;
-        min-width: 370px;
+        max-width: 380px;
+
     }
+
+    .step-list-title {
+        margin: 122px 0 92px 0;
+    }
+
 
     .step-list__icon {
         font-size: 24px;
@@ -1535,18 +1637,21 @@ body {
         max-height: 50px;
     }
 
+
+
     .step-list__content {
         margin-top: 34px;
         font-size: 24px;
-        line-height: 28.8px;
+        line-height: 1.3;
     }
-
 
     .registration-header {
         width: 40%;
     }
 
     .registration {
+        padding: 81px 0;
+        max-width: 1540px;
         font-family: 'Ruberoid', sans-serif;
         display: flex;
     }
@@ -1560,6 +1665,7 @@ body {
 
     .registration__description {
         margin-top: 30px;
+        padding-right: 70px;
         font-size: 40px;
         line-height: 48px;
         letter-spacing: -0.085em;
@@ -1575,9 +1681,8 @@ body {
     }
 
     .registration__input {
-        padding: 30px;
-        width: 100%;
-        /*padding: 8px;*/
+        padding: 26px 30px 24px 32px;
+        width: 98%;
         border-radius: 40px;
         border: 1px solid #ffffff;
         background: #000;
@@ -1589,10 +1694,10 @@ body {
     }
 
     .registration__button {
-        margin-top: 40px;
+        margin-top: 30px;
         font-family: 'Ruberoid', sans-serif;
-        width: 100%;
-        padding: 16px;
+        width: 98%;
+        padding: 16px 0 12px 0;
         text-align: center;
         background-color: white;
         color: rgba(27, 63, 94, 1);
@@ -1619,6 +1724,8 @@ body {
     }
 
 }
+
+
 
 
 
