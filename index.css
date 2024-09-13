@@ -6,7 +6,7 @@
 
 body {
     min-width: 320px;
-    width: 360px;
+    /*width: 360px;*/
     position: relative;
     font-family: 'Ruberoid', sans-serif;
     line-height: 1.4;
